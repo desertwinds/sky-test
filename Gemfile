@@ -18,7 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'haml'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -55,7 +55,15 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Using haml instead of erb
+gem 'haml'
+
 # Using this gem to make http calls
 gem 'httparty'
 
 gem 'pry'
+#Bootstrap gem
+gem 'bootstrap', '~> 4.0.0.alpha4'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
