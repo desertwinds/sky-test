@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Sky Bills
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag 'sky-favicon.png', rel: 'shortcut icon', type: 'image/png'
+  %body
+    %header.layout-header
+      = render "layouts/header"
+
+    .layout-content
+      = yield
+
+    %footer.layout-footer
+      = render "layouts/footer"
