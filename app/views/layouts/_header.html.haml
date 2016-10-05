@@ -1,10 +1,11 @@
 %nav.navbar.navbar-light.bg-faded
   .container-fluid
-    %button.navbar-toggler.hidden-sm-up{"aria-controls" => "exCollapsingNavbar2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#exCollapsingNavbar2", "data-toggle" => "collapse", :type => "button"}
+    %button.navbar-toggler.pull-xs-right.hidden-md-up{"aria-controls" => "exCollapsingNavbar2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#skyNav", "data-toggle" => "collapse", :type => "button"}
       &#9776;
     %a.navbar-brand{:href => "#"}
       = image_tag('sky-logo-redesign.png', alt: 'Sky Logo')
-    #exCollapsingNavbar2.collapse.navbar-toggleable-xs
+
+    #skyNav.collapse.navbar-toggleable-sm
       
       %ul.nav.navbar-nav
         %li.nav-item.active
