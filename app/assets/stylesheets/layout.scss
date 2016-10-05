@@ -1,0 +1,46 @@
+// Fonts
+@font-face {
+  font-family: 'SkyTextRegular';
+  src: font-url('sky_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SkyTextMedium';
+  src: font-url('sky_medium.woff') format('woff');
+}
+
+
+body {
+  background: #D3D3D3 linear-gradient(90deg,#c9c7d1 0,#e5e5ea 6%,#fefefe 20%,#fefefe 80%,#e5e5ea 94%,#c9c7d1);
+  font-family: SkyTextRegular, Helvetica, Arial;
+}
+
+.layout-header {
+
+  .container-fluid {
+    max-width: 75%;
+  }
+
+  .navbar-nav,
+  .navbar-toggler {
+    padding-top: 10px;
+  }
+
+  li.nav-item {
+    font-family: SkyTextRegular, Helvetica, Arial;
+  }
+
+  li.nav-item.active {
+    font-family: SkyTextMedium, Helvetica, Arial;
+  }
+  
+}
+
+h1 {
+  font-family: SkyTextMedium;
+}
+
+.layout-content {
+  margin: 0 auto;
+  max-width: 75%;
+}
