@@ -1,0 +1,26 @@
+%nav.navbar.navbar-light.bg-faded
+  .container-fluid
+    %button.navbar-toggler.hidden-sm-up{"aria-controls" => "exCollapsingNavbar2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#exCollapsingNavbar2", "data-toggle" => "collapse", :type => "button"}
+      &#9776;
+    %a.navbar-brand{:href => "#"}
+      = image_tag('sky-logo-redesign.png', alt: 'Sky Logo')
+    #exCollapsingNavbar2.collapse.navbar-toggleable-xs
+      
+      %ul.nav.navbar-nav
+        %li.nav-item.active
+          %a.nav-link{:href => "#"}
+            Home
+            %span.sr-only (current)
+        %li.nav-item
+          %a.nav-link{:href => "#"} Find & Watch
+        %li.nav-item
+          %a.nav-link{:href => "#"} Shop
+        %li.nav-item
+          %a.nav-link{:href => "#"} My Sky
+        %li.nav-item
+          %a.nav-link{:href => "#"} Help & Support
+
+
+      
+
+
