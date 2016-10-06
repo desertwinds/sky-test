@@ -1,0 +1,22 @@
+.container.header-separator
+  %h1 Your statement
+
+  #vue-sky.container
+    .container
+      %ul.nav.navbar-nav
+        %li.nav-item 
+          %a{href: "#", '@click': 'toggleView("statement-overview")'} Statement
+        %li.nav-item 
+          %a{href: "#", '@click': 'toggleView("package-breakdown")'} Package
+        %li.nav-item 
+          %a{href: "#", '@click': 'toggleView("calls-breakdown")'} Calls
+        %li.nav-item 
+          %a{href: "#", '@click': 'toggleView("store-breakdown")'} Store
+    %component{':is': "currentView", ':data': 'getMyData()'}
+    
+
+
+= render 'vue_templates/statement_overview'
+= render 'vue_templates/package_breakdown'
+= render 'vue_templates/calls_breakdown'
+= render 'vue_templates/store_breakdown'
