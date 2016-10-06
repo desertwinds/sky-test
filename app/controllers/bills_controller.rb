@@ -1,7 +1,13 @@
 class BillsController < ApplicationController
   
   def index
-    @json_response = get_bill
+    respond_to do |format|
+      format.html
+      format.json do 
+        @json_response = get_bill
+        render json: @json_response
+      end
+    end
   end
 
   private 
