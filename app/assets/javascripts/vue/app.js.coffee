@@ -1,4 +1,6 @@
 #= require vue
+#= require moment
+#= require ./filters
 #= require_tree ./components
 
 $(document).ready ->
