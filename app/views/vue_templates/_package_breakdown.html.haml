@@ -1,4 +1,18 @@
 %template#package-breakdown
-  .statement-container
-    %p This is packages. Total is {{data.total}}
+  .container.bill-container
+    %table.table.table-bordered
+      %thead.thead-default
+        %tr
+          %th Type
+          %th Name
+          %th Cost
+      %tbody
+        %tr{'v-for': 'sub in data.subscriptions'}
+          %td {{sub.type | capitalize}}
+          %td {{sub.name}}
+          %td {{sub.cost | displayDecimals}}
+
+    #total
+      Total amount: 
+      %strong {{data.total | displayDecimals}}
     

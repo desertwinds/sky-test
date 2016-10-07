@@ -1,3 +1,8 @@
+.bill-container {
+  background: white;
+  margin-top: 20px;
+}
+
 .display-messages {
   margin-top: 15px;
 }
@@ -23,3 +28,8 @@
   100% { transform: rotate(360deg); }
 }
 
+@media (min-width: 767px){
+  .bill-container {
+    font-size: 1.5em;
+  }
+}

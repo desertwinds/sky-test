@@ -1,3 +1,23 @@
 %template#statement-overview
-  .statement-container
-    %p This is statement. Total is {{data.total}}
+  .container.bill-container
+    %table.table
+      %tr
+        %td
+          #bill-date
+            Date
+            %strong {{data.generated | moment}}
+      %tr
+        %td
+          #pay-by
+            Pay by
+            %strong {{data.due | moment}}
+      %tr
+        %td
+          #bill-period
+            Bill period 
+            %strong {{data.period.from | moment }} - {{data.period.to | moment }}
+      %tr
+        %td
+          #total
+            Total amount: 
+            %strong {{data.total | displayDecimals}}
