@@ -12,17 +12,18 @@
             %option 10
             %option 20
             %option 50
-    %table.table.table-bordered
-      %thead.thead-default
-        %tr
-          %th Number called
-          %th Duration
-          %th Cost
-      %tbody
-        %tr{'v-for': 'sub in data.calls | paginate currentPage itemsPerPage'}
-          %td {{sub.called}}
-          %td {{sub.duration}}
-          %td {{sub.cost | displayDecimals}}
+    .table-responsive
+      %table.table.table-bordered
+        %thead.thead-default
+          %tr
+            %th Number called
+            %th Duration
+            %th Cost
+        %tbody
+          %tr{'v-for': 'sub in data.calls | paginate currentPage itemsPerPage'}
+            %td {{sub.called}}
+            %td {{sub.duration}}
+            %td {{sub.cost | displayDecimals}}
     = render "vue_templates/pagination_navigation"
 
     

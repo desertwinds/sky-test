@@ -1,16 +1,17 @@
 %template#package-breakdown
   .container.bill-container
-    %table.table.table-bordered
-      %thead.thead-default
-        %tr
-          %th Type
-          %th Name
-          %th Cost
-      %tbody
-        %tr{'v-for': 'sub in data.subscriptions'}
-          %td {{sub.type | capitalize}}
-          %td {{sub.name}}
-          %td {{sub.cost | displayDecimals}}
+    .table-responsive
+      %table.table.table-bordered
+        %thead.thead-default
+          %tr
+            %th Type
+            %th Name
+            %th Cost
+        %tbody
+          %tr{'v-for': 'sub in data.subscriptions'}
+            %td {{sub.type | capitalize}}
+            %td {{sub.name}}
+            %td {{sub.cost | displayDecimals}}
 
     #total
       Total amount: 
