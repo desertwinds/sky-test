@@ -1,3 +1,25 @@
-// Place all the styles related to the bills controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.display-messages {
+  margin-top: 15px;
+}
+
+.loader {
+  border: 16px solid  rgba(5,111,242, 0.2);
+  border-radius: 50%;
+  border-top: 16px solid #056ff2;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

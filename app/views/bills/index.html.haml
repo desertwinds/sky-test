@@ -4,7 +4,7 @@
   #vue-sky.container
     .container
       %ul.nav.navbar-nav
-        %li.nav-item 
+        %li.nav-item
           %a{href: "#", '@click': 'toggleView("statement-overview")'} Statement
         %li.nav-item 
           %a{href: "#", '@click': 'toggleView("package-breakdown")'} Package
@@ -12,7 +12,15 @@
           %a{href: "#", '@click': 'toggleView("calls-breakdown")'} Calls
         %li.nav-item 
           %a{href: "#", '@click': 'toggleView("store-breakdown")'} Store
-    %component{':is': "currentView", ':data': 'getMyData()'}
+    %component{':is': "currentView", ':data': 'getMyData()', 'v-if': 'showBill'}
+    .display-messages.col-xs-12{'v-else': ''}
+      .alert-danger{'v-if': 'errors["errors"]'}
+        %p {{errors['errors']}}
+      .loading-spinner{'v-else': ''}
+        .col-xs-4
+        .col-xs-2
+          .loader
+        .col-xs-6
     
 
 
