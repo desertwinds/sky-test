@@ -11,3 +11,10 @@ Vue.filter 'displayDecimals', (value) ->
   if (!value)
     return
   value = value.toFixed(2)
+
+Vue.filter 'paginate', (data, page, itemsPerPage) ->
+  if (!data)
+    return []
+  begin = (page - 1) * itemsPerPage  
+  end = (page * itemsPerPage) 
+  data.slice(begin, end)

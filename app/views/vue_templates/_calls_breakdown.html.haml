@@ -1,4 +1,28 @@
 %template#calls-breakdown
   .container.bill-container
-    %p This is calls. Total is {{data.total}}
+    .row
+      #total.total-calls.col-xs-6
+        Total amount: 
+        %strong {{data.total | displayDecimals}}
+      .col-xs-6
+        .form-group.form-inline
+          %label.col-form-label{'for': 'elements-per-page'}
+            Calls being displayed per page: 
+          %select.form-control.elements-per-page{'v-model': 'itemsPerPage'}
+            %option 10
+            %option 20
+            %option 50
+    %table.table.table-bordered
+      %thead.thead-default
+        %tr
+          %th Number called
+          %th Duration
+          %th Cost
+      %tbody
+        %tr{'v-for': 'sub in data.calls | paginate currentPage itemsPerPage'}
+          %td {{sub.called}}
+          %td {{sub.duration}}
+          %td {{sub.cost | displayDecimals}}
+    = render "vue_templates/pagination_navigation"
+
     
