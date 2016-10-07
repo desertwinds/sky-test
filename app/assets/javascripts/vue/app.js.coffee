@@ -11,6 +11,8 @@ $(document).ready ->
         package: {}
         calls: {}
         store: {}
+        errors: {}
+        showBill: false
       }
     methods: 
       toggleView: (view) ->
@@ -36,6 +38,9 @@ $(document).ready ->
             myInstance.package = res["package"]
             myInstance.calls = res["callCharges"]
             myInstance.store = res["skyStore"]
+            myInstance.showBill = true
+          else
+            myInstance.errors = res
     )
 
     
