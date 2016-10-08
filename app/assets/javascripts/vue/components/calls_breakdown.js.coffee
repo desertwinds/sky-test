@@ -13,4 +13,5 @@ Vue.component 'calls-breakdown',
     {
       'itemsPerPage': (val, oldVal) ->
         this.currentPage = 1
+        this.totalPages = (this.data.calls.length) / val
     }

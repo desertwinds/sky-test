@@ -1,4 +1,32 @@
 %template#store-breakdown
   .container.bill-container
-    %p This is store. Total is {{data.total}}
+    .container
+      #total.total-calls.col-xs-6
+        Total amount: 
+        %strong {{data.total | displayDecimals}}
+      .col-xs-6
+        .form-group.form-inline
+          %label.col-form-label{'for': 'elements-per-page'}
+            Calls being displayed per page: 
+          %select.form-control.elements-per-page{'v-model': 'itemsPerPage'}
+            %option 10
+            %option 20
+            %option 50
+    .container
+      %ul.nav.navbar-nav
+        %li.nav-item
+          %a{href: "#", '@click': 'currentFilter = "rentals"'} Rentals
+        %li.nav-item 
+          %a{href: "#", '@click': 'currentFilter = "buyAndKeep"'} Buy & Keep
+    .table-responsive
+      %table.table.table-bordered
+        %thead.thead-default
+          %tr
+            %th Title
+            %th Cost
+        %tbody
+          %tr{'v-for': 'sub in currentData | paginate currentPage itemsPerPage'}
+            %td {{sub.title}}
+            %td {{sub.cost | displayDecimals}}
+    = render "vue_templates/pagination_navigation"
     
