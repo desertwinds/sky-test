@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is done for the guys at Sky as part of an unattended test.
 
-Things you may want to cover:
+The page can be found up and running at https://sheltered-earth-30288.herokuapp.com/
 
-* Ruby version
+# Sky test
 
-* System dependencies
+This was developed with:
 
-* Configuration
+* Ruby ~> 2.3.0
+* Ruby on Rails ~> 5.0
+* Bootstrap ~> 4.0.0.alpha4
+* vueJs ~> 1.0.28
 
-* Database creation
+# Database
 
-* Database initialization
+No use of databases was needed for this app. The bill displayed on this test is acquired from a web service provided by Sky at 
 
-* How to run the test suite
+```
+http://safe-plains-5453.herokuapp.com/bill.json
+```
+# Tests
 
-* Services (job queues, cache servers, search engines, etc.)
+RSpec was used to test this app. To run the tests all you need to do is 
 
-* Deployment instructions
-
-* ...
+```
+bundle exec rspec spec/
+```
