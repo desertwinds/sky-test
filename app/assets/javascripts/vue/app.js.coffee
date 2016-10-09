@@ -36,6 +36,7 @@ $(document).ready ->
         url: '/bill.json'
         success: (res) ->
           if !res["errors"]
+            console.log(res)
             myInstance.statement = res["statement"]
             myInstance.package = res["package"]
             myInstance.calls = res["callCharges"]

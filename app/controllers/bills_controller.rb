@@ -8,6 +8,7 @@ class BillsController < ApplicationController
         if (!@json_response['errors'])
           @json_response['statement']['total'] = @json_response['total']
         end
+
         render json: @json_response
       end
     end

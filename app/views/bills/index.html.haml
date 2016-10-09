@@ -3,13 +3,13 @@
 
   #vue-sky.container
     .container.bill-navigation
-      %a.navigation-element{href: "#", '@click': 'toggleView("statement-overview")', alt: 'Statement', 'data-toggle': "tooltip", title: "Statement", 'v-bind:class': '{active: currentView == "statement-overview"}'} 
+      %a#statement.navigation-element{href: "#", '@click': 'toggleView("statement-overview")', alt: 'Statement', 'data-toggle': "tooltip", title: "Statement", 'v-bind:class': '{active: currentView == "statement-overview"}'} 
         = fa_icon('money')
-      %a.navigation-element{href: "#", '@click': 'toggleView("package-breakdown")', alt: 'Packages', 'data-toggle': "tooltip", title: "Packages", 'v-bind:class': '{active: currentView == "package-breakdown"}'} 
+      %a#packages.navigation-element{href: "#", '@click': 'toggleView("package-breakdown")', alt: 'Packages', 'data-toggle': "tooltip", title: "Packages", 'v-bind:class': '{active: currentView == "package-breakdown"}'} 
         = fa_icon('tachometer')
-      %a.navigation-element{href: "#", '@click': 'toggleView("calls-breakdown")', alt: 'Calls', 'data-toggle': "tooltip", title: "Calls", 'v-bind:class': '{active: currentView == "calls-breakdown"}'} 
+      %a#calls.navigation-element{href: "#", '@click': 'toggleView("calls-breakdown")', alt: 'Calls', 'data-toggle': "tooltip", title: "Calls", 'v-bind:class': '{active: currentView == "calls-breakdown"}'} 
         = fa_icon('phone')
-      %a.navigation-element{href: "#", '@click': 'toggleView("store-breakdown")', alt: 'Store', 'data-toggle': "tooltip", title: "Store", 'v-bind:class': '{active: currentView == "store-breakdown"}'} 
+      %a#store.navigation-element{href: "#", '@click': 'toggleView("store-breakdown")', alt: 'Store', 'data-toggle': "tooltip", title: "Store", 'v-bind:class': '{active: currentView == "store-breakdown"}'} 
         = fa_icon('shopping-cart')
     %component{':is': "currentView", ':data': 'getMyData()', 'v-if': 'showBill'}
     .display-messages.col-xs-12{'v-else': ''}
