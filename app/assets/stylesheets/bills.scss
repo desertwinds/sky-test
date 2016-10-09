@@ -2,47 +2,20 @@
   margin-top: 20px;
 }
 
-.bill-navigation {
-  display: table;
-  width: 100%;
-  padding-left: 0;
 
-  a {
-      display: block;
-      text-align: center;
-    }
-
-    a.active,
-    a.active:hover {
-      background: #1ea0f5;
-      color: white;
-    }
-
-    a:hover {
-      background: #cb0033;
-      color: white;
-    }
-
-  .navigation-element {
-    display: table-cell; 
-    width: 25%;
-    
-    
-  }
-
-}
 
 .display-messages {
   margin-top: 15px;
 }
 
-.shop-navigation {
+.bill-navigation {
   display: flex;
 
   a.active,
   a.active:hover {
     background: #1ea0f5;
     color: white;
+
   }
 
   a:hover {
@@ -57,9 +30,13 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 50%;
+    text-decoration: none;
+    width: 25%;
   }
+}
 
+.bill-navigation.shop-navigation .navigation-element{
+  width: 50%;
 }
 
 
