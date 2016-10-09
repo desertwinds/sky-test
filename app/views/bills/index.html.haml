@@ -5,17 +5,17 @@
     .container
       %ul.nav.navbar-nav
         %li.nav-item
-          %a{href: "#", '@click': 'toggleView("statement-overview")'} 
-            = image_tag('check.png', alt: 'Statement')
+          %a{href: "#", '@click': 'toggleView("statement-overview")', alt: 'Statement', 'data-toggle': "tooltip", title: "Statement"} 
+            = fa_icon('money')
         %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("package-breakdown")'} 
-            = image_tag('package.png', alt: 'Packages')
+          %a{href: "#", '@click': 'toggleView("package-breakdown")', alt: 'Packages', 'data-toggle': "tooltip", title: "Packages"} 
+            = fa_icon('tachometer')
         %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("calls-breakdown")'} 
-            = image_tag('phone-call.png', alt: 'Calls')
+          %a{href: "#", '@click': 'toggleView("calls-breakdown")', alt: 'Calls', 'data-toggle': "tooltip", title: "Calls"} 
+            = fa_icon('phone')
         %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("store-breakdown")'} 
-            = image_tag('shopping-cart.png', alt: 'Store')
+          %a{href: "#", '@click': 'toggleView("store-breakdown")', alt: 'Store', 'data-toggle': "tooltip", title: "Store"} 
+            = fa_icon('shopping-cart')
     %component{':is': "currentView", ':data': 'getMyData()', 'v-if': 'showBill'}
     .display-messages.col-xs-12{'v-else': ''}
       .alert-danger{'v-if': 'errors["errors"]'}
