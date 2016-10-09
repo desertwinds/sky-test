@@ -3,18 +3,18 @@
 
   #vue-sky.container
     .container
-      %ul.nav.navbar-nav
-        %li.nav-item
-          %a{href: "#", '@click': 'toggleView("statement-overview")', alt: 'Statement', 'data-toggle': "tooltip", title: "Statement"} 
+      %ul.bill-navigation
+        %li.navigation-element
+          %a{href: "#", '@click': 'toggleView("statement-overview")', alt: 'Statement', 'data-toggle': "tooltip", title: "Statement", 'v-bind:class': '{active: currentView == "statement-overview"}'} 
             = fa_icon('money')
-        %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("package-breakdown")', alt: 'Packages', 'data-toggle': "tooltip", title: "Packages"} 
+        %li.navigation-element
+          %a{href: "#", '@click': 'toggleView("package-breakdown")', alt: 'Packages', 'data-toggle': "tooltip", title: "Packages", 'v-bind:class': '{active: currentView == "package-breakdown"}'} 
             = fa_icon('tachometer')
-        %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("calls-breakdown")', alt: 'Calls', 'data-toggle': "tooltip", title: "Calls"} 
+        %li.navigation-element
+          %a{href: "#", '@click': 'toggleView("calls-breakdown")', alt: 'Calls', 'data-toggle': "tooltip", title: "Calls", 'v-bind:class': '{active: currentView == "calls-breakdown"}'} 
             = fa_icon('phone')
-        %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("store-breakdown")', alt: 'Store', 'data-toggle': "tooltip", title: "Store"} 
+        %li.navigation-element
+          %a{href: "#", '@click': 'toggleView("store-breakdown")', alt: 'Store', 'data-toggle': "tooltip", title: "Store", 'v-bind:class': '{active: currentView == "store-breakdown"}'} 
             = fa_icon('shopping-cart')
     %component{':is': "currentView", ':data': 'getMyData()', 'v-if': 'showBill'}
     .display-messages.col-xs-12{'v-else': ''}

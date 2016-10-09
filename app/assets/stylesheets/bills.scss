@@ -2,10 +2,68 @@
   margin-top: 20px;
 }
 
+.bill-navigation {
+  display: table;
+  width: 100%;
+  padding-left: 0;
+
+  a {
+      display: block;
+      text-align: center;
+    }
+
+    a.active,
+    a.active:hover {
+      background: #1ea0f5;
+      color: white;
+    }
+
+    a:hover {
+      background: #cb0033;
+      color: white;
+    }
+
+  .navigation-element {
+    display: table-cell; 
+    width: 25%;
+    
+    
+  }
+
+}
+
 .display-messages {
   margin-top: 15px;
 }
 
+.shop-navigation {
+  display: flex;
+
+  a.active,
+  a.active:hover {
+    background: #1ea0f5;
+    color: white;
+  }
+
+  a:hover {
+    background: #cb0033;
+    color: white;
+  }
+
+  .navigation-element{
+
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+  }
+
+}
+
+
+// Waiting for AJAX call loader.
 .loader {
   border: 16px solid  rgba(5,111,242, 0.2);
   border-radius: 50%;
@@ -15,7 +73,6 @@
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
-
 
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
@@ -27,12 +84,29 @@
   100% { transform: rotate(360deg); }
 }
 
-#total.total-calls {
+// A minor padding in totals displayed in same row with elements per page
+#total.total-amount {
   padding: 0.5rem 0;
 }
 
-@media (min-width: 900px){
-  .bill-container {
+//Query for larger than tablet displays
+@media (min-width: 768px){
+  .bill-navigation {
+    font-size: 3em;
+  }
+
+  .shop-navigation {
+    font-size: 2em;
+  }
+}
+
+//Query for tablet and lower displays
+@media (max-width: 767px) {
+  .bill-navigation {
     font-size: 1.5em;
+  }
+
+  .shop-navigation {
+    font-size: 1em;
   }
 }

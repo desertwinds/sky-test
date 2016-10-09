@@ -52,8 +52,13 @@ strong {
   padding-top: 15px;
 }
 
-// Bootstrap4 header navbar float fix
+// Bootstrap4 header navbar float fix and heading responsive size
 @media (max-width: 767px) {
+
+  h1 {
+    font-size: 1.5em;
+  }
+
   .navbar-toggleable-sm {
     clear: both; 
   }

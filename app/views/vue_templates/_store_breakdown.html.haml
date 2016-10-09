@@ -1,7 +1,7 @@
 %template#store-breakdown
   .container.bill-container
     .container
-      #total.total-calls.col-xs-6
+      #total.total-amount.col-xs-6
         Total amount: 
         %strong {{data.total | displayDecimals}}
       .col-xs-6
@@ -12,12 +12,9 @@
             %option 10
             %option 20
             %option 50
-    .container
-      %ul.nav.navbar-nav
-        %li.nav-item
-          %a{href: "#", '@click': 'currentFilter = "rentals"'} Rentals
-        %li.nav-item 
-          %a{href: "#", '@click': 'currentFilter = "buyAndKeep"'} Buy & Keep
+    .container.bill-navigation.shop-navigation
+      %a.navigation-element{href: "#", '@click': 'currentFilter = "rentals"', 'v-bind:class': '{active: currentFilter == "rentals"}'} Rentals
+      %a.navigation-element{href: "#", '@click': 'currentFilter = "buyAndKeep"', 'v-bind:class': '{active: currentFilter == "buyAndKeep"}'} Buy & Keep
     .table-responsive
       %table.table.table-bordered
         %thead.thead-default
