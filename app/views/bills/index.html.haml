@@ -1,17 +1,21 @@
 .container.header-separator
-  %h1 Your statement
+  %h1 Your Sky Bill
 
   #vue-sky.container
     .container
       %ul.nav.navbar-nav
         %li.nav-item
-          %a{href: "#", '@click': 'toggleView("statement-overview")'} Statement
+          %a{href: "#", '@click': 'toggleView("statement-overview")'} 
+            = image_tag('check.png', alt: 'Statement')
         %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("package-breakdown")'} Package
+          %a{href: "#", '@click': 'toggleView("package-breakdown")'} 
+            = image_tag('package.png', alt: 'Packages')
         %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("calls-breakdown")'} Calls
+          %a{href: "#", '@click': 'toggleView("calls-breakdown")'} 
+            = image_tag('phone-call.png', alt: 'Calls')
         %li.nav-item 
-          %a{href: "#", '@click': 'toggleView("store-breakdown")'} Store
+          %a{href: "#", '@click': 'toggleView("store-breakdown")'} 
+            = image_tag('shopping-cart.png', alt: 'Store')
     %component{':is': "currentView", ':data': 'getMyData()', 'v-if': 'showBill'}
     .display-messages.col-xs-12{'v-else': ''}
       .alert-danger{'v-if': 'errors["errors"]'}
