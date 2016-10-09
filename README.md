@@ -20,6 +20,7 @@ No use of databases was needed for this app. The bill displayed on this test is 
 ```
 http://safe-plains-5453.herokuapp.com/bill.json
 ```
+
 # Tests
 
 RSpec was used to test this app. To run the tests all you need to do is 
